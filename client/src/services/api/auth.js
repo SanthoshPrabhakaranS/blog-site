@@ -2,7 +2,7 @@ import axios from "axios";
 import { endpoints } from "../../endpoints/endpoints";
 
 export const ApiInstance = axios.create({
-  baseURL: "http://localhost:5001",
+  baseURL: "https://blog-site-prij.onrender.com",
 });
 
 export default class AuthService {

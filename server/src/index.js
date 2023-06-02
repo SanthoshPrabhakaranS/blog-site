@@ -30,16 +30,6 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use('/uploads', express.static('uploads'));
 
 // FILE STORAGE
-// const storage = multer.diskStorage({
-//   destination: (req, file, cb) => {
-//     cb(null, "./images");
-//   },
-//   filename: (req, file, cb) => {
-//     cb(null, Date.now() + path.extname(file.filename));
-//   },
-// });
-// const upload = multer({ storage });
-
 const storage = multer.diskStorage({
   destination: "uploads",
   filename: (req, file, cb) => {
