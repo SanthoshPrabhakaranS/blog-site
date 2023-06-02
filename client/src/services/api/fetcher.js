@@ -7,7 +7,7 @@ const fetcher = (url) => axios.get(url).then((res) => res.data);
 //GET ALL BLOGS
 export const useBlogs = () => {
   const { data, isLoading, error, mutate } = useSWR(
-    `http://localhost:5001${endpoints.getBlogs}`,
+    `https://blog-site-prij.onrender.com${endpoints.getBlogs}`,
     fetcher
   );
 
@@ -22,7 +22,7 @@ export const useBlogs = () => {
 //GET SINGLE BLOG
 export const useGetSingleBlog = (id) => {
   const { data, isLoading, error, mutate } = useSWR(
-    `http://localhost:5001${endpoints.getSingleBlog(id)}`,
+    `https://blog-site-prij.onrender.com${endpoints.getSingleBlog(id)}`,
     fetcher
   );
 
@@ -37,7 +37,7 @@ export const useGetSingleBlog = (id) => {
 //GET CATEGORY
 export const useGetCategory = (category) => {
   const { data, isLoading, error, mutate } = useSWR(
-    `http://localhost:5001${endpoints.getCategory(category)}`,
+    `https://blog-site-prij.onrender.com${endpoints.getCategory(category)}`,
     fetcher
   );
 

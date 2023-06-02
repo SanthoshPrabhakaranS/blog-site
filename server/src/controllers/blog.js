@@ -5,7 +5,7 @@ export const createBlog = async (req, res) => {
   try {
     const { userId, blogTitle, blogContent, blogCategory } = req.body;
     const file = req.file;
-    const imageUrl = `http://localhost:5001/uploads/${file.filename}`;
+    const imageUrl = `https://blog-site-prij.onrender.com/uploads/${file.filename}`;
     const newBlog = new Blog({
       userId,
       blogTitle,
@@ -47,7 +47,7 @@ export const updateBlog = async (req, res) => {
   try {
     const { blogId, blogTitle, blogContent } = req.body;
     const file = req.file;
-    const imageUrl = `http://localhost:5001/uploads/${file.filename}`;
+    const imageUrl = `https://blog-site-prij.onrender.com/uploads/${file.filename}`;
     const blog = await Blog.find({ _id: blogId });
 
     if ((blogTitle, blogContent)) {
